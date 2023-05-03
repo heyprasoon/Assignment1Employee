@@ -10,7 +10,6 @@ import jakarta.persistence.Table;
 public class Employee {
 
     @Id
-    @GeneratedValue
     private int id;
     private String name;
     private String city;

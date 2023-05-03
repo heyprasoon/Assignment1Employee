@@ -9,7 +9,6 @@ public class Assignment1EmployeeApplication {
     public static void main(String[] args) {
         SpringApplication.run(Assignment1EmployeeApplication.class, args);
         System.out.println("Server is running....");
-        System.out.println("Just a change");
     }
 
 }

@@ -23,7 +23,7 @@ public class EmployeeController {
 
 
         @GetMapping("/getemp/{id}")
-        public ResponseEntity<Employee> getemp(@PathVariable("id") int id){
+        public Employee getemp(@PathVariable("id") int id){
                 return  employeeService.getemp(id);
         }
 
@@ -31,6 +31,13 @@ public class EmployeeController {
         public void addemp(@RequestBody List<Employee> list)
         {
                 employeeService.addemp(list);
+        }
+
+        @PutMapping("/updateemp/{id}")
+        public ResponseEntity<String> updateemp(@RequestBody Employee emp, @PathVariable("id") int empid){
+
+               return employeeService.updateemp(emp, empid);
+
         }
 
         @DeleteMapping("/deleteemp/{id}")
